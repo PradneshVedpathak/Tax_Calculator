@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Tax Calculator</title>
+</head>
+
+<body>
+    <form id="formContainer">
+        <div>
+            <label for="grossIncome">Enter gross annual income</label>
+            <span class="infoIcon" id="infoSymbol">? </span>
+            <span class="infoText">Gross annual income is the amount you earn each year before any taxes or other
+                deductions are applied.</span>
+            <div class="inputBox">
+                <input type="number" class="inputField" name="grossIncome" id="grossIncome">
+                <span class="errorIcon" id="grossIncomeError">!</span>
+                <span class="errorText" id="grossIncomeErrorText">Please enter numbers only.</span>
+            </div>
+        </div>
+
+        <div>
+            <label for="extraIncome">Enter Extra Income</label>
+            <span class="infoIcon" id="infoSymbol">?</span>
+            <span class="infoText">Supplemental income is money you earn in addition to your regular paycheck</span>
+            <div class="inputBox">
+                <input type="number" class="inputField" name="extraIncome" id="extraIncome">
+                <span class="errorIcon" id="extraIncomeError">!</span>
+                <span class="errorText" id="extraIncomeErrorText">Please enter numbers only.</span>
+            </div>
+        </div>
+
+        <div>
+            <label for="age">Enter Age</label>
+            <span class="infoIcon" id="infoSymbol">?</span>
+            <span class="infoText">Select your age group</span>
+            <div class="inputBox">
+                <select class="inputField" name="age" id="age">
+                    <option value="<40">&lt; 40</option>
+                    <option value="≥40 &amp; <60">&ge; 40 &amp; &lt; 60</option>
+                    <option value="≥60">&ge; 60</option>
+                </select>
+            </div>
+        </div>
+
+        <div>
+            <label for="deductions">Enter total applicable Deductions</label>
+            <span class="infoIcon" id="infoSymbol">?</span>
+            <span class="infoText">A deduction is an expense that can be subtracted from taxable income to reduce
+                the
+                amount owed.</span>
+            <div class="inputBox">
+                <input type="number" class="inputField" name="deductions" id="deductions">
+                <span class="errorIcon" id="deductionsError">!</span>
+                <span class="errorText" id="deductionsErrorText">Please enter numbers only.</span>
+            </div>
+        </div>
+
+
+        <button type="button" class="btn btn-primary btn-lg" id="CalculateBtn"
+            onclick="calculateTax()">Calculate</button>
+    </form>
+
+    <div id="resultContainer">
+        <div id="result">
+            <h1>Your overall income will be</h1>
+            <h3 id="finalIncome">No TAX</h3>
+            <p>after tax deductions</p>
+            <button type="button" class="btn btn-primary btn-lg" id="CalculateBtn"
+                onclick="returnToForm()">Close</button>
+        </div>
+    </div>
+</body>
+<script src="main.js">
+</script>
+
+</html>

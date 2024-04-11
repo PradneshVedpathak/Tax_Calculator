@@ -1,0 +1,107 @@
+body {
+    background-color: #3f3d3d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#formContainer {
+    width: 50%;
+    height: 70%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    background: #FAF9F6;
+    border-radius: 15px;
+    position: fixed;
+}
+
+label {
+    padding-left: 10%;
+    color: #3f3d3d;
+    font-size: 20px;
+}
+
+.inputBox {
+    margin-top: 2;
+    border-radius: 3px;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-bottom: 2%;
+}
+
+#CalculateBtn {
+    margin-left: 10%;
+    margin-top: 3%;
+}
+
+.inputField {
+    width: 90%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+
+span {
+    margin-left: 10px;
+    font-size: 20px;
+    color: #ccc;
+}
+
+#infoSymbol {
+    position: relative;
+    display: inline-block;
+}
+
+.infoText {
+    visibility: hidden;
+    width: 20%;
+    background-color: #3f3d3d;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    font-size: 15px;
+}
+
+#infoSymbol:hover+span {
+    visibility: visible;
+}
+
+#resultContainer {
+    visibility: hidden;
+    z-index: 1;
+    align-items: center;
+    background-color: #fff;
+    width: 50%;
+    height: 70%;
+}
+
+#result {
+    margin: 20%;
+    text-align: center;
+}
+
+.errorText {
+    visibility: hidden;
+    width: 20%;
+    background-color: #ff0000;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    font-size: 15px;
+}
+
+.errorIcon {
+    visibility: hidden;
+    color: #ff0000;
+}
